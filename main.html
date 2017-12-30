@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>quiz</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <script src="libraries/jquery_google.js"></script>
+    <script src="libraries/jquery_ibm.js"></script>
+    <script src="libraries/jquery_microsoft.js"></script>
+    <script src="libraries/mainjquery.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="step">
+            <div id="one">1</div>
+            <div id="two">2</div>
+            <div id="three">3</div>
+            <div id="four">4</div>
+            <div id="five">5</div>
+        </div>
+        <div id="complete">
+            <div id="msg">complete</div>
+            <div id="progress">
+                <div id="percent"></div>
+            </div>
+        </div>
+        <div id="que_more">
+            <p id="start"><i style="color:antiquewhite" class="fa fa-play" aria-hidden="true"></i> Start</p>
+            <div id="que">
+                <div id="que_one">
+                    <p><span style="color: #1abc9c">'OS'</span> computer abbreviation usually means ?</p> <br>
+                    <input type="checkbox"  value=" Order of Significance"> Order of Significance  <br>
+                    <input type="checkbox"  value="Open Software"> Open Software  <br>
+                    <input type="checkbox"  value="Operating System"> Operating System <br>
+                    <input type="checkbox"  value="Optical Sensor"> Optical Sensor <br>
+                    <input type="submit" id="submit_one" value="submit"> 
+                </div>
+                <div id="que_two">
+                    <p>'.MOV' extension refers usually to what kind of file?</p> <br>
+                    <input type="checkbox" value="Image file"> Image file  <br>
+                    <input type="checkbox" value="Animation/movie file"> Animation/movie file  <br>
+                    <input type="checkbox" value="Audio file"> Audio file <br>
+                    <input type="checkbox" value="MS Office document"> MS Office document <br>
+                    <input type="submit" id="submit_two" value="submit"> 
+                </div>
+                <div id="que_three">
+                    <p>Who developed Yahoo?</p> <br>
+                    <input type="checkbox" value="Dennis Ritchie & Ken Thompson"> Dennis Ritchie & Ken Thompson  <br>
+                    <input type="checkbox" value="David Filo & Jerry Yang"> David Filo & Jerry Yang  <br>
+                    <input type="checkbox" value="Vint Cerf & Robert Kahn"> Vint Cerf & Robert Kahn <br>
+                    <input type="checkbox" value="Steve Case & Jeff Bezos">Steve Case & Jeff Bezos <br>
+                    <input type="submit" id="submit_three" value="submit">  
+                </div>
+                <div id="que_four">
+                    <p>What is the relationship between resistivity r and conductivity s?</p> <br>
+                    <input type="checkbox" value="R = s2"> R = s2  <br>
+                    <input type="checkbox" value="R = s"> R = s  <br>
+                    <input type="checkbox" value="R > s"> R > s <br>
+                    <input type="checkbox" value="R = 1/s"> R = 1/s <br>
+                    <input type="submit" id="submit_four" value="submit"> 
+                </div>
+                <div id="que_five">
+                    <p>'DB' computer abbreviation usually means ?</p> <br>
+                    <input type="checkbox" value="Database"> Database  <br>
+                    <input type="checkbox" value="Double Byte"> Double Byte  <br>
+                    <input type="checkbox" value="Data Block"> Data Block <br>
+                    <input type="checkbox" value="Driver Boot"> Driver Boot <br>
+                    <input type="submit" id="submit_five" value="submit"> 
+                </div>
+                <div id="finish">
+                    <p id="end"><i class="fa fa-check" aria-hidden="true"></i></p> 
+                </div>
+            </div>
+        </div>
+        <div id="cancel_retake">
+            <p id="retake"><i style="color:aqua" class="fa fa-repeat" aria-hidden="true"></i> retake</p>
+            <p style="width:140px" id="answer">See Answer</p>
+            <div id="answers">
+                <!-- que1 ans starts -->
+                <p id="queestion1">'OS' computer abbreviation usually means ? <span id="que1_plus"><i style="cursor:pointer;color:bisque;" class="fa fa-plus" aria-hidden="true"></i></span></p>
+
+                <p id="queestion1_ans">Operating System <span id="que1_minus"> <i style="cursor:pointer;color:bisque;margin-left:245px;" class="fa fa-minus" aria-hidden="true"></i></span></p>
+                <!-- que1 ans ends -->
+
+                <!-- que2 ans starts -->
+                <p style="font-size:17px;" id="queestion2">'.MOV' extension refers usually to what kind of file? <span id="que2_plus"><i style="cursor:pointer;color:bisque;" class="fa fa-plus" aria-hidden="true"></i></span></p>
+
+                <p id="queestion2_ans">Animation/movie file  <span id="que2_minus"> <i style="cursor:pointer;color:bisque;margin-left:210px;" class="fa fa-minus" aria-hidden="true"></i></span></p>
+                <!-- que2 ans ends -->
+
+                <!-- que3 ans starts -->
+                <p id="queestion3">Who developed Yahoo? <span id="que3_plus"><i style="margin-left:190px;cursor:pointer;color:bisque;" class="fa fa-plus" aria-hidden="true"></i></span></p>
+
+                <p id="queestion3_ans">David Filo & Jerry Yang  <span id="que3_minus"> <i style="cursor:pointer;color:bisque;margin-left:190px;" class="fa fa-minus" aria-hidden="true"></i></span></p>
+                <!-- que3 ans ends -->
+
+                <!-- que4 ans starts -->
+                <p style="font-size:18px;" id="queestion4">What is the relationship between resistivity r and conductivity s? <span id="que4_plus"><i style="cursor:pointer;color:bisque;margin-left:290px" class="fa fa-plus" aria-hidden="true"></i></span></p>
+
+                <p id="queestion4_ans">R = 1/s  <span id="que4_minus"> <i style="cursor:pointer;color:bisque;margin-left:345px;" class="fa fa-minus" aria-hidden="true"></i></span></p>
+                <!-- que4 ans ends -->
+
+                <!-- que5 ans starts -->
+                <p id="queestion5">'DB' computer abbreviation usually means ? <span id="que5_plus"><i style="cursor:pointer;color:bisque;" class="fa fa-plus" aria-hidden="true"></i></span></p>
+
+                <p id="queestion5_ans">Database <span id="que5_minus"> <i style="cursor:pointer;color:bisque;margin-left:330px;" class="fa fa-minus" aria-hidden="true"></i></span></p>
+                <!-- que5 ans ends -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
