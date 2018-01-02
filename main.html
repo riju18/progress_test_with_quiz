@@ -7,18 +7,22 @@
     <title>quiz</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- google fonts set up -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <!-- all library setup starts -->
     <script src="libraries/jquery_google.js"></script>
     <script src="libraries/jquery_ibm.js"></script>
     <script src="libraries/jquery_microsoft.js"></script>
     <script src="libraries/mainjquery.js"></script>
-    <script src="main.js"></script>
+    <!-- all library setup ends -->
+    <script src="main.js"></script>  <!-- js file link up -->
 </head>
 <body>
     <div id="main">
+        <!-- steps starts -->
         <div id="step">
             <div id="one">1</div>
             <div id="two">2</div>
@@ -26,13 +30,16 @@
             <div id="four">4</div>
             <div id="five">5</div>
         </div>
-        <div id="complete">
+
+        <!-- steps ends -->
+        <div id="complete">             <!-- progress bar starts -->
             <div id="msg">complete</div>
             <div id="progress">
                 <div id="percent"></div>
             </div>
-        </div>
-        <div id="que_more">
+        </div>                          <!-- progress bar ends -->
+
+        <div id="que_more">   <!-- all que are set up starts -->
             <p id="start"><i style="color:antiquewhite" class="fa fa-play" aria-hidden="true"></i> Start</p>
             <div id="que">
                 <div id="que_one">
@@ -79,11 +86,14 @@
                     <p id="end"><i class="fa fa-check" aria-hidden="true"></i></p> 
                 </div>
             </div>
-        </div>
-        <div id="cancel_retake">
+        </div>               <!-- all que are set up ends -->
+
+        <div id="cancel_retake">       
+            <!-- retake button set up --> 
             <p id="retake"><i style="color:aqua" class="fa fa-repeat" aria-hidden="true"></i> retake</p>
-            <p style="width:140px" id="answer">See Answer</p>
-            <div id="answers">
+            <p style="width:140px" id="answer">See Answer</p> <!-- answer show button set up -->
+
+            <div id="answers">     <!-- all quiz answers are set up starts -->
                 <!-- que1 ans starts -->
                 <p id="queestion1">'OS' computer abbreviation usually means ? <span id="que1_plus"><i style="cursor:pointer;color:bisque;" class="fa fa-plus" aria-hidden="true"></i></span></p>
 
@@ -113,7 +123,7 @@
 
                 <p id="queestion5_ans">Database <span id="que5_minus"> <i style="cursor:pointer;color:bisque;margin-left:330px;" class="fa fa-minus" aria-hidden="true"></i></span></p>
                 <!-- que5 ans ends -->
-            </div>
+            </div>    <!-- all quiz answers are set up ends -->
         </div>
     </div>
 </body>
