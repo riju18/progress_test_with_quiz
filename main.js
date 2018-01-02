@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    /* all que,retake button,finish icon,answer button */
     $("#que_one").hide();
     $("#que_two").hide();
     $("#que_three").hide();
@@ -8,6 +9,7 @@ $(document).ready(function () {
     $("#finish").hide();
     $("#answer").hide();
     $("#answers").hide();
+    /* all que,retake button,finish icon,answer button*/
 
     /* all que answers is hided */
     $("#queestion1_ans").hide();
@@ -18,12 +20,12 @@ $(document).ready(function () {
     /* all que answers is hided */
 
 
-    var pro = document.getElementById("percent");
-    var width = 0;
+    var pro = document.getElementById("percent"); //percent id ;
+    var width = 0;   //var for calculating progress;
     var score="";
-    var correctAnswer = 0;
+    var correctAnswer = 0;  //var for total correct answers;
 
-    $("#start").click(function () {   //when start is clicked
+    $("#start").click(function () {   //when start is clicked all r hided except retake button & que_1 div;
         $("#start").hide();
         $("#que_one").show();
         $("#cancel_retake").show();
@@ -32,12 +34,12 @@ $(document).ready(function () {
         $("#que_four").hide();
         $("#que_five").hide();
         $("#finish").hide();
-        $("#one").css({
+        $("#one").css({             //css for step_1
             "background":"#f39c12",
             "color":"white"
         });
     });
-    $("#retake").click(function () {    //when retake is clicked
+    $("#retake").click(function () {    //when retake is clicked quiz will start from begin
         location.reload();        //page refresh
         $("#start").show();
         $("#que_one").hide();
@@ -47,7 +49,9 @@ $(document).ready(function () {
         $("#que_four").hide();
         $("#que_five").hide();
         $("#finish").hide();
-        $("#one").css({
+
+        //initialy no css for steps;
+        $("#one").css({             
             "background":"none",
             "color":"black"
         });
@@ -69,7 +73,7 @@ $(document).ready(function () {
         });
     });
     $("#submit_one").click(function () {    //when 1st que is submitted;
-        var getCheck = $('input[type="checkbox"]:checked');
+        var getCheck = $('input[type="checkbox"]:checked');  //hold the ans of que
         if ( getCheck.length > 0 ) {
              var result = getCheck.length;
             getCheck.each(function () {
@@ -77,14 +81,14 @@ $(document).ready(function () {
               });
               if ( result == "Operating System" ) {
                // $("#output").html(result);   
-               correctAnswer++;
+               correctAnswer++;  //correctAnswer is counted;
               }
 
-              width+=20;
+              width+=20;                    //progress is incremeneted 20%;
               pro.style.width = width + '%';
               pro.innerHTML = width * 1 + '%' ;
         }
-        $("#two").css({
+        $("#two").css({                    //css for 2nd step
             "background":"#f39c12",
             "color":"white"
         });
@@ -92,14 +96,14 @@ $(document).ready(function () {
         $("#start").hide();
         $("#que_one").hide();
         $("#cancel_retake").show();
-        $("#que_two").show();
+        $("#que_two").show();       //que_2 is opened & all are hided;
         $("#que_three").hide();
         $("#que_four").hide();
         $("#que_five").hide();
         $("#finish").hide();
     });
-    $("#submit_two").click(function () { 
-        var getCheck = $('input[type="checkbox"]:checked');
+    $("#submit_two").click(function () {         //when 2nd que is submitted;
+        var getCheck = $('input[type="checkbox"]:checked');     //hold the ans of que
         if ( getCheck.length > 0 ) {
             var result = getCheck.length;
             getCheck.each(function () {
@@ -107,15 +111,15 @@ $(document).ready(function () {
               });
               if ( result == "Animation/movie file" ) {
                 //$("#output").html(result);
-                correctAnswer++;   
-              }
+                correctAnswer++;                       //correctAnswer is counted;
+              } 
 
-              width+=20;
+              width+=20;                               //progress is incremeneted 20%;
               pro.style.width = width + '%';
               pro.innerHTML = width * 1 + '%' ;
               
         }
-        $("#three").css({
+        $("#three").css({                            // css for 3rd step
             "background":"#f39c12",
             "color":"white"
         });
@@ -123,13 +127,13 @@ $(document).ready(function () {
         $("#que_one").hide();
         $("#cancel_retake").show();
         $("#que_two").hide();
-        $("#que_three").show();
+        $("#que_three").show();        //que_3 is opened & all are hided;
         $("#que_four").hide();
         $("#que_five").hide();
         $("#finish").hide();
     });
-    $("#submit_three").click(function () { 
-        var getCheck = $('input[type="checkbox"]:checked');
+    $("#submit_three").click(function () {         //when 3rd que is submitted;
+        var getCheck = $('input[type="checkbox"]:checked');     //hold the ans of que
         if ( getCheck.length > 0 ) {
             var result = getCheck.length;
             getCheck.each(function () {
@@ -137,15 +141,15 @@ $(document).ready(function () {
               });
               if ( result == "David Filo & Jerry Yang" ) {
                 //$("#output").html(result);
-                correctAnswer++;   
+                correctAnswer++;                //correctAnswer is counted;
               }
 
-              width+=20;
+              width+=20;                         //progress is incremeneted 20%;
               pro.style.width = width + '%';
               pro.innerHTML = width * 1 + '%' ;
               
-        }
-        $("#four").css({
+        } 
+        $("#four").css({                       // css for 4th step
             "background":"#f39c12",
             "color":"white"
         });
@@ -155,12 +159,12 @@ $(document).ready(function () {
         $("#cancel_retake").show();
         $("#que_two").hide();
         $("#que_three").hide();
-        $("#que_four").show();
+        $("#que_four").show();              //que_4 is opened & all are hided;
         $("#que_five").hide();
         $("#finish").hide();
     });
-    $("#submit_four").click(function () { 
-        var getCheck = $('input[type="checkbox"]:checked');
+    $("#submit_four").click(function () {  //when 4th que is submitted;
+        var getCheck = $('input[type="checkbox"]:checked');      //hold the ans of que
         if ( getCheck.length > 0 ) {
             var result = getCheck.length;
             getCheck.each(function () {
@@ -168,15 +172,15 @@ $(document).ready(function () {
               });
               if ( result == "R = 1/s" ) {
                 //$("#output").html(result);   
-                correctAnswer++;
+                correctAnswer++;                  //correctAnswer is counted;
               }
 
-              width+=20;
+              width+=20;                          //progress is incremeneted 20%;
               pro.style.width = width + '%';
               pro.innerHTML = width * 1 + '%' ;
               
         } 
-        $("#five").css({
+        $("#five").css({                         // css for 4th step
             "background":"#f39c12",
             "color":"white"
         });
@@ -187,11 +191,11 @@ $(document).ready(function () {
         $("#que_two").hide();
         $("#que_three").hide();
         $("#que_four").hide();
-        $("#que_five").show();
+        $("#que_five").show();                 //que_5 is opened & all are hided;
         $("#finish").hide();
     });
-    $("#submit_five").click(function () { 
-        var getCheck = $('input[type="checkbox"]:checked');
+    $("#submit_five").click(function () {          //when 5th que is submitted;
+        var getCheck = $('input[type="checkbox"]:checked');  //hold the ans of que
         if ( getCheck.length > 0 ) {
             var result = getCheck.length;
             getCheck.each(function () {
@@ -199,15 +203,15 @@ $(document).ready(function () {
               });
               if ( result == "Database" ) {
                 //$("#output").html(result);   
-                correctAnswer++;
+                correctAnswer++;               //correctAnswer is counted;
               }
 
-              width+=20;
+              width+=20;                       //progress is incremeneted 20%;
               pro.style.width = width + '%';
               pro.innerHTML = width * 1 + '%' ;
               
         }
-        if ( correctAnswer == 5 ) {
+        if ( correctAnswer == 5 ) {        //when all que are correct;
             score = "score 100%";
             setTimeout(function () { 
                 $("#end").html(score);
@@ -218,7 +222,7 @@ $(document).ready(function () {
                 });
              }, 3700);
         }
-        if ( correctAnswer == 4 ) {
+        if ( correctAnswer == 4 ) {     //when 4 que are correct;
             score = "score 80%";
             setTimeout(function () { 
                 $("#end").html(score);
@@ -229,7 +233,7 @@ $(document).ready(function () {
                 });
              }, 3700);
         }
-        if ( correctAnswer == 3 ) {
+        if ( correctAnswer == 3 ) {     //when 3 que are correct;
             score = "score 60%";
             setTimeout(function () { 
                 $("#end").html(score);
@@ -240,7 +244,7 @@ $(document).ready(function () {
                 });
              }, 3700);
         }
-        if ( correctAnswer == 2 ) {
+        if ( correctAnswer == 2 ) {      //when 2 que are correct;
             score = "score 40%";
             setTimeout(function () { 
                 $("#end").html(score);
@@ -251,7 +255,7 @@ $(document).ready(function () {
                 });
              }, 3700);
         }
-        if ( correctAnswer == 1 ) {
+        if ( correctAnswer == 1 ) {       //when 1 que are correct;
             score = "score 20%";
             setTimeout(function () { 
                 $("#end").html(score);
@@ -262,7 +266,7 @@ $(document).ready(function () {
                 });
              }, 3700);
         }
-        if ( correctAnswer == 0 ) {
+        if ( correctAnswer == 0 ) {     //when all que are incorrect;
             score = "score 0%";
             setTimeout(function () { 
                 $("#end").html(score);
@@ -280,11 +284,13 @@ $(document).ready(function () {
         $("#que_three").hide();
         $("#que_four").hide();
         $("#que_five").hide();
-        $("#finish").show();
-        $("#answer").show();
+        $("#finish").show();    //finish icon, score is shown;
+        $("#answer").show();    //answer button will be displayed;
 
-        $("#answer").click(function () { 
-            $("#answers").show();
+        $("#answer").click(function () {   //when answer button will clicked
+            $("#answers").show();          //html "answers" div will diaplayed;
+
+            /* when any que is clicked the answer will be displayed  */
 
             $("#que1_plus").click(function () { 
                 $("#queestion1_ans").slideDown();
